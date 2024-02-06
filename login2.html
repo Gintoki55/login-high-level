@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login high level</title>
+    <link rel="stylesheet" href="login2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@500&family=Poppins:ital,wght@0,400;0,500;1,400&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="center">
+        <div class="container">
+
+            <div class="signIn">
+                <h1>sign in</h1>
+                <div class="icons">
+                    <button class="btnIcon">
+                        <i class="fa-brands fa-google"></i>
+                    </button>
+                    <button class="btnIcon">
+                        <i class="fa-brands fa-facebook"></i>
+                    </button>
+                    <button class="btnIcon">
+                        <i class="fa-brands fa-github"></i>
+                    </button>
+                    <button class="btnIcon">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </button>
+                </div>
+
+                <p id="above-txt-field">or use your email password</p>
+
+                <div class="txt-field">
+                    <input type="email" class="email" placeholder="Email">
+                    <input type="password" class="password" placeholder="Password">
+                </div>
+                <p class="forgetPass"><a href="#" id="forgetPass">Forget Your Password ?</a></p>
+
+                <button class="signBtn">sign in</button>
+            </div>
+
+            <div class="signUp">
+                <h1>Create Account</h1>
+                <div class="icons">
+                    <button class="btnIcon">
+                        <i class="fa-brands fa-google"></i>
+                    </button>
+                    <button class="btnIcon">
+                        <i class="fa-brands fa-facebook"></i>
+                    </button>
+                    <button class="btnIcon">
+                        <i class="fa-brands fa-github"></i>
+                    </button>
+                    <button class="btnIcon">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </button>
+                </div>
+
+                <p id="above-txt-field">or use your email for registeration</p>
+
+                <div class="txt-field field2">
+                    <input type="text" class="text" placeholder="Username">
+                    <input type="email" class="email" placeholder="Email">
+                    <input type="password" class="password" placeholder="Password">
+                </div>
+
+
+                <button class="signBtn">sign up</button>
+            </div>
+            <div class="toggle">
+
+                <div class="toggle-left wrapper">
+                    <h1>welcome back!</h1>
+                    <p class="des">Enter your personal details to use all of site features</p>
+                    <button class="toggle-btn leftBtn">signin</button>
+                </div>
+
+                <div class="toggle-right wrapper">
+                    <h1> Hello, Friend!</h1>
+                    <p class="des">Register with your personal details to use all of site features</p>
+                    <button class="toggle-btn rightBtn">signUp</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const leftBtn = document.querySelector('.leftBtn');
+        const rightBtn = document.querySelector('.rightBtn');
+        const toggle = document.querySelector('.toggle');
+        const container = document.querySelector('.container');
+
+        rightBtn.addEventListener("click", function(){
+            toggle.classList.add('active')
+            container.classList.add('active2')
+        })
+
+        leftBtn.addEventListener("click", function(){
+            toggle.classList.remove('active')
+            container.classList.remove('active2')
+        })
+    </script>
+</body>
+</html>
